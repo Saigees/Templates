@@ -1,0 +1,14 @@
+ReactTS/node_modules
+ReactTS/yarn.lock
+ReactTS/.env
+ReactTS/yarn.error
+
+DiscordTS/node_modules
+DiscordTS/yarn.lock
+DiscordTS/.env
+DiscordTS/yarn.error
+
+ExpressAPI/node_modules
+ExpressAPI/yarn.lock
+ExpressAPI/.env
+ExpressAPI/yarn.error

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --fade-background: rgba(255, 255, 255, 0.3);
+  --fade-background-dark: rgba(255, 255, 255, 0.3);
+  --fade-border: 1px solid rgba(255, 255, 255, 0.5);
+  --fade-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+  --fade-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+  --font: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: url(../../public/splash.jpg);
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  font-family: var(--font);
+}
+
+.credits {
+  position: fixed;
+  z-index: 999;
+  top: 94.5%;
+  left: 1%;
+  right: 0;
+  text-decoration: none;
+  opacity: 0.25;
+  width: 200px;
+  color: #fff;
+}
+.credits::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  top: 110%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.credits:hover::before {
+  width: 100%;
+}
+
+.default {
+  width: 100vw;
+  height: 49vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 300px;
+  width: 400px;
+  border-radius: 9px;
+  color: #fff;
+  overflow: hidden;
+  border: var(--fade-border);
+  box-shadow: var(--fade-shadow);
+  background-color: var(--fade-background);
+  backdrop-filter: var(--fade-filter);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.box h1 {
+  margin-top: 1.5rem;
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+.box p {
+  opacity: 0.5;
+  margin-left: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+.box ul {
+  margin-left: 1.25rem;
+  margin-bottom: 2.3rem;
+}
+.box ul li {
+  list-style-type: none;
+}
+
+.box ul li span {
+  opacity: 0.5;
+}
+
+.box .btn {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  opacity: 0.25;
+  color: #fff;
+  position: relative;
+  overflow-y: hidden;
+}
+.box .btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  top: 110%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.box .btn:hover::before {
+  width: 100%;
+}

@@ -8,7 +8,7 @@ const Serve = () => {
     Bun.serve({
         port: parseInt(process.env.PORT),
         fetch: (req: Request) => {
-            return new Response("Hello World! Request type: "+req.method )
+            return new Response("Hello World! Request type: " + req.method)
         }
     })
 }
@@ -17,7 +17,7 @@ const Serve = () => {
 
 const fizzBuzz = (num: number) => {
     if (num % 2 === 0) {
-        console.log("fizz "+ num )
+        console.log("fizz " + num)
     } else {
         console.log("buzz " + num)
     }
